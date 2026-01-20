@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shows | Dwight Icenhower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#111; color:#f5f5f5; line-height:1.6; }
+    header { background:#000; padding:20px; text-align:center; }
+    header h1 { margin:0; letter-spacing:2px; }
+    nav { margin-top:15px; }
+    nav a { color:#d4af37; text-decoration:none; margin:0 12px; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    h2 { margin-top: 0; }
+    .sub { color:#bbb; max-width: 900px; margin: 10px auto 0; text-align:center; }
+
+    .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin-top: 26px; }
+    .card { background:#000; border:1px solid #333; border-radius:14px; overflow:hidden; }
+    .img {
+      height: 170px;
+      background: linear-gradient(135deg, #333, #000);
+      display:flex; align-items:center; justify-content:center;
+      color:#d4af37; font-weight:bold; letter-spacing:1px;
+    }
+    .content { padding: 18px; }
+    .tag { display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; border:1px solid #444; color:#bbb; margin-bottom:10px; }
+    .card h3 { margin: 6px 0 10px; }
+    .meta { color:#bbb; font-size: 14px; margin: 8px 0 12px; }
+    ul { margin: 0 0 12px 18px; color:#ddd; }
+    li { margin: 6px 0; }
+
+    .btns { display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:8px; background:#d4af37; color:#000; text-decoration:none; font-weight:bold; }
+    .btn.secondary { background:transparent; color:#d4af37; border:2px solid #d4af37; }
+
+    .band { margin-top: 36px; background:#000; border:1px solid #333; border-radius:14px; padding: 18px; text-align:center; }
+    .band p { color:#bbb; margin: 10px 0 0; }
+    footer { background:#000; padding:25px; text-align:center; font-size:14px; color:#aaa; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DWIGHT ICENHOWER</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/tour-dates.html">Tour Dates</a>
+    <a href="/shows.html">Shows</a>
+    <a href="/vip-weekend.html">VIP Weekend</a>
+    <a href="/media.html">Media</a>
+    <a href="/about.html">About</a>
+    <a href="/book-dwight.html">Book Dwight</a>
+  </nav>
+</header>
+
+<main>
+  <h2 style="text-align:center;">Shows</h2>
+  <p class="sub">
+    Dwight performs multiple live productions. Each show has its own style, setlist energy, and ideal venues.
+    This page is the hub — we’ll refine details and add real photos once the direction is approved.
+  </p>
+
+  <div class="cards">
+
+    <!-- Elvis Tribute -->
+    <div class="card">
+      <div class="img">ELVIS TRIBUTE — HERO IMAGE</div>
+      <div class="content">
+        <div class="tag">Flagship Production</div>
+        <h3>Elvis Tribute Concert Experience</h3>
+        <div class="meta">
+          Award-winning tribute honoring Elvis Presley’s music, spirit, and legacy — designed for theaters, festivals, casinos, and special events.
+        </div>
+        <ul>
+          <li>Era-spanning set options (50s / 60s / 70s)</li>
+          <li>High-impact live concert presentation</li>
+          <li>Ideal for headline bookings and festivals</li>
+        </ul>
+        <div class="btns">
+          <a class="btn" href="/tour-dates.html">See Dates</a>
+          <a class="btn secondary" href="/book-dwight.html">Book This Show</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elton John Tribute -->
+    <div class="card">
+      <div class="img">ELTON TRIBUTE — HERO IMAGE</div>
+      <div class="content">
+        <div class="tag">High-Energy Tribute</div>
+        <h3>Elton John Tribute Show</h3>
+        <div class="meta">
+          A celebration of Elton John’s legendary catalog — colorful, upbeat, and built for audiences who want a sing-along, feel-good night.
+        </div>
+        <ul>
+          <li>Concert-style tribute experience</li>
+          <li>Great for theaters, events, and festivals</li>
+          <li>Designed for broad audience appeal</li>
+        </ul>
+        <div class="btns">
+          <a class="btn" href="/tour-dates.html">See Dates</a>
+          <a class="btn secondary" href="/book-dwight.html">Book This Show</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lonesome Cowboy Strangers -->
+    <div class="card">
+      <div class="img">LCS — HERO IMAGE</div>
+      <div class="content">
+        <div class="tag">Original Americana</div>
+        <h3>Lonesome Cowboy Strangers</h3>
+        <div class="meta">
+          An original project with a classic Americana feel — storytelling, musicianship, and a live experience that connects with listening audiences.
+        </div>
+        <ul>
+          <li>Original music and authentic stage presence</li>
+          <li>Ideal for listening rooms and intimate venues</li>
+          <li>Great addition to multi-act events</li>
+        </ul>
+        <div class="btns">
+          <a class="btn" href="/tour-dates.html">See Dates</a>
+          <a class="btn secondary" href="/book-dwight.html">Book This Show</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="band">
+    <strong>Looking for the once-a-year premium fan experience?</strong>
+    <p>
+      The VIP Weekend is a separate three-day event with limited capacity.
+      <br />
+      <a class="btn" style="margin-top:12px;" href="/vip-weekend.html">Explore VIP Weekend</a>
+    </p>
+  </div>
+</main>
+
+<footer>© Dwight Icenhower • Concept Website Demo</footer>
+
+</body>
+</html>
