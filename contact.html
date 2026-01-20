@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Dwight Icenhower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#111; color:#f5f5f5; line-height:1.6; }
+    header { background:#000; padding:20px; text-align:center; }
+    header h1 { margin:0; letter-spacing:2px; }
+    nav { margin-top:15px; }
+    nav a { color:#d4af37; text-decoration:none; margin:0 12px; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+
+    .hero { background: radial-gradient(circle at top, #333, #000); padding: 60px 20px; text-align:center; border-bottom:1px solid #222; }
+    .hero h2 { margin:0 0 10px; font-size: 38px; }
+    .hero p { margin: 10px auto 0; max-width: 920px; color:#ddd; font-size: 18px; }
+
+    main { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 900px){ .grid { grid-template-columns: 1fr 1fr; } }
+
+    .box { background:#000; border:1px solid #333; border-radius:14px; padding:18px; }
+    .box h3 { margin-top:0; }
+    .note { color:#bbb; font-size:14px; margin-top: 10px; }
+
+    .btns { display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    .btn { display:inline-block; padding:12px 16px; border-radius:8px; background:#d4af37; color:#000; text-decoration:none; font-weight:bold; }
+    .btn.secondary { background:transparent; color:#d4af37; border:2px solid #d4af37; }
+
+    .field { margin: 10px 0; }
+    .label { display:block; color:#bbb; margin-bottom: 6px; font-size: 14px; }
+    input, textarea, select {
+      width: 100%;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px;
+      color: #f5f5f5;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    textarea { min-height: 120px; }
+
+    footer { background:#000; padding:25px; text-align:center; font-size:14px; color:#aaa; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DWIGHT ICENHOWER</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/tour-dates.html">Tour Dates</a>
+    <a href="/shows.html">Shows</a>
+    <a href="/vip-weekend.html">VIP Weekend</a>
+    <a href="/media.html">Media</a>
+    <a href="/about.html">About</a>
+    <a href="/book-dwight.html">Book Dwight</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Contact</h2>
+  <p>
+    Questions from fans, venues, promoters, and press. Choose the path below so your message gets to the right place.
+    (Concept page — we’ll swap in final contact emails and policies.)
+  </p>
+</section>
+
+<main>
+
+  <div class="grid">
+
+    <div class="box">
+      <h3>Booking & Promoter Inquiries</h3>
+      <p>
+        For theaters, festivals, casinos, corporate events, and private engagements.
+      </p>
+      <div class="btns">
+        <a class="btn" href="/book-dwight.html">Go to Booking Page</a>
+        <a class="btn secondary" href="mailto:booking@yourdomain.com?subject=Booking%20Inquiry%20-%20Dwight%20Icenhower">Email Booking</a>
+      </div>
+      <div class="note">Replace <strong>booking@yourdomain.com</strong> with the final booking email.</div>
+    </div>
+
+    <div class="box">
+      <h3>VIP Weekend Questions</h3>
+      <p>
+        Questions about the VIP Weekend experience, reservations, or logistics.
+      </p>
+      <div class="btns">
+        <a class="btn" href="/vip-weekend.html">VIP Weekend Page</a>
+        <a class="btn secondary" href="https://dwighticenhowerfans.square.site/" target="_blank" rel="noopener">VIP Checkout</a>
+      </div>
+      <div class="note">If VIP support uses an email or form, we’ll add it here.</div>
+    </div>
+
+    <div class="box">
+      <h3>Press / Media</h3>
+      <p>
+        For interview requests, media assets, or press-related questions.
+      </p>
+      <div class="btns">
+        <a class="btn" href="/media.html">Media Page</a>
+        <a class="btn secondary" href="mailto:press@yourdomain.com?subject=Press%20Request%20-%20Dwight%20Icenhower">Email Press</a>
+      </div>
+      <div class="note">Replace <strong>press@yourdomain.com</strong> with the final press email.</div>
+    </div>
+
+    <div class="box">
+      <h3>General Message (Concept Form)</h3>
+      <p class="note">
+        GitHub Pages is a static site, so this form is for layout/UX only right now.
+        If you want, we can connect a no-tech form service later.
+      </p>
+
+      <div class="field">
+        <span class="label">Name</span>
+        <input type="text" placeholder="Your name" />
+      </div>
+      <div class="field">
+        <span class="label">Email</span>
+        <input type="email" placeholder="you@email.com" />
+      </div>
+      <div class="field">
+        <span class="label">Topic</span>
+        <select>
+          <option>General question</option>
+          <option>Tour date / tickets</option>
+          <option>VIP Weekend</option>
+          <option>Booking / Promoter</option>
+          <option>Press / Media</option>
+        </select>
+      </div>
+      <div class="field">
+        <span class="label">Message</span>
+        <textarea placeholder="Write your message here..."></textarea>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="mailto:info@yourdomain.com?subject=Message
