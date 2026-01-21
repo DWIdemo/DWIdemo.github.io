@@ -2,76 +2,239 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dwight Icenhower | Site Concept</title>
+  <title>Dwight Icenhower | Official Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      margin: 0;
+    :root{
+      --bg:#0b0b0b;
+      --panel:#000;
+      --border:#2a2a2a;
+      --text:#f5f5f5;
+      --muted:#bdbdbd;
+      --gold:#d4af37;
+    }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: #f5f5f5;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
     }
-    header {
-      background: #000;
-      padding: 20px;
-      text-align: center;
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background: rgba(0,0,0,.92);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid #161616;
     }
-    header h1 {
-      margin: 0;
-      letter-spacing: 2px;
+    .header-inner{
+      max-width:1120px;
+      margin:0 auto;
+      padding:16px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
     }
-    nav {
-      margin-top: 15px;
+    .logo{
+      font-weight:800;
+      letter-spacing:2px;
+      font-size:16px;
+      white-space:nowrap;
     }
-    nav a {
-      color: #d4af37;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav a{
+      color: var(--gold);
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      padding:6px 8px;
+      border-radius:10px;
     }
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background: radial-gradient(circle at top, #333, #000);
+    nav a:hover{ text-decoration: underline; }
+
+    /* Layout */
+    .wrap{ max-width:1120px; margin:0 auto; padding:0 18px; }
+    .section{ padding:56px 0; }
+    .kicker{
+      color: var(--gold);
+      font-weight:800;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      font-size:12px;
     }
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+    h1{ margin:10px 0 10px; font-size:44px; line-height:1.1; }
+    h2{ margin:0 0 10px; font-size:28px; }
+    p{ margin:0; color:#e8e8e8; }
+    .muted{ color: var(--muted); }
+
+    /* Hero */
+    .hero{
+      padding:64px 0 44px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(212,175,55,.20), transparent 45%),
+        radial-gradient(circle at 80% 0%, rgba(255,255,255,.10), transparent 45%),
+        radial-gradient(circle at 50% 120%, rgba(212,175,55,.10), transparent 55%);
+      border-bottom:1px solid #151515;
     }
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 25px;
-      font-size: 18px;
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap:22px;
+      align-items:stretch;
     }
-    .cta a {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 26px;
-      background: #d4af37;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns:1fr; }
     }
-    .cta a.secondary {
-      background: transparent;
-      color: #d4af37;
-      border: 2px solid #d4af37;
+    .hero-card{
+      background: rgba(0,0,0,.55);
+      border:1px solid #1a1a1a;
+      border-radius:18px;
+      padding:22px;
     }
-    section {
-      padding: 60px 20px;
-      text-align: center;
+    .hero-copy p{ margin-top:10px; font-size:18px; color:#ddd; }
+    .badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .badge{
+      border:1px solid var(--border);
+      background:#000;
+      color:#ddd;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      font-weight:700;
     }
-    footer {
-      background: #000;
-      padding: 25px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
+    .cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:800;
+      text-decoration:none;
+      border:2px solid var(--gold);
+    }
+    .btn.primary{ background: var(--gold); color:#000; }
+    .btn.secondary{ background:transparent; color: var(--gold); }
+
+    /* Polished placeholder / image */
+    .ph{
+      height: 380px;
+      border-radius:18px;
+      border:1px solid #222;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.10), rgba(0,0,0,.0)),
+        linear-gradient(135deg, #2b2b2b, #000);
+      box-shadow: 0 18px 40px rgba(0,0,0,.55);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color: var(--gold);
+      font-weight:900;
+      letter-spacing:1px;
+      padding:16px;
+    }
+    .hero-img{
+      width:100%;
+      height:380px;
+      border-radius:18px;
+      border:1px solid #222;
+      object-fit:cover;
+      box-shadow: 0 18px 40px rgba(0,0,0,.55);
+      display:block;
+    }
+
+    /* Feature cards */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    @media (max-width: 980px){
+      .cards{ grid-template-columns:1fr; }
+    }
+    .card{
+      background:#000;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+    }
+    .card .title{
+      color: var(--gold);
+      font-weight:900;
+      letter-spacing:.5px;
+      margin-bottom:6px;
+    }
+
+    /* Shows strip */
+    .show-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    @media (max-width: 980px){
+      .show-grid{ grid-template-columns:1fr; }
+    }
+    .show{
+      background:#000;
+      border:1px solid var(--border);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    .show-ph{
+      height: 160px;
+      background: linear-gradient(135deg, #2b2b2b, #000);
+      border-bottom:1px solid #1e1e1e;
+      display:flex; align-items:center; justify-content:center;
+      color: var(--gold); font-weight:900; letter-spacing:1px;
+      text-align:center; padding:10px;
+    }
+    .show-img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      display:block;
+      border-bottom:1px solid #1e1e1e;
+    }
+    .show-body{ padding:16px; }
+    .show-body h3{ margin:0 0 8px; }
+    .show-body p{ color:#ddd; }
+    .mini-cta{ margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
+
+    /* Tour */
+    .tour-box{
+      background:#000;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      margin-top:16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    /* Footer */
+    footer{
+      border-top:1px solid #151515;
+      background:#000;
+      padding:26px 18px;
+      text-align:center;
+      color:#a9a9a9;
+      font-size:14px;
     }
   </style>
 </head>
@@ -79,39 +242,166 @@
 <body>
 
 <header>
-  <h1>DWIGHT ICENHOWER</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/tour-dates.html">Tour Dates</a>
-    <a href="/shows.html">Shows</a>
-    <a href="/vip-weekend.html">VIP Weekend</a>
-    <a href="/media.html">Media</a>
-    <a href="/about.html">About</a>
-    <a href="/book-dwight.html">Book Dwight</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <div class="logo">DWIGHT ICENHOWER</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/tour-dates.html">Tour Dates</a>
+      <a href="/shows.html">Shows</a>
+      <a href="/vip-weekend.html">VIP Weekend</a>
+      <a href="/media.html">Media</a>
+      <a href="/about.html">About</a>
+      <a href="/book-dwight.html">Book Dwight</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="hero">
-  <h2>World Champion Elvis Tribute Artist</h2>
-  <p>
-    A live concert experience celebrating the music, legacy, and spirit
-    of Elvis Presley — performed by the only five-time Ultimate Elvis
-    Tribute Artist Champion.
-  </p>
-  <div class="cta">
-    <a href="/tour-dates.html">View Tour Dates</a>
-    <a href="/media.html" class="secondary">Watch Performance</a>
-  </div>
-</div>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
 
-<section>
-  <h2>Multiple Live Productions</h2>
-  <p>
-    From an award-winning Elvis tribute to a high-energy Elton John
-    celebration and an original Americana project, Dwight offers
-    distinct live experiences for fans and venues.
-  </p>
+      <div class="hero-card hero-copy">
+        <div class="kicker">WORLD CHAMPION • TOURING PERFORMER • MULTIPLE PRODUCTIONS</div>
+        <h1>America’s Premier Elvis Concert Experience</h1>
+        <p>
+          Dwight Icenhower delivers a cinematic live concert tribute—big energy, authentic detail, and a crowd connection that
+          turns shows into events.
+        </p>
+
+        <div class="badges">
+          <div class="badge">Elvis Tribute Concert</div>
+          <div class="badge">Elton John Tribute</div>
+          <div class="badge">Lonesome Cowboy Strangers</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="/tour-dates.html">View Tour Dates</a>
+          <a class="btn secondary" href="/media.html">Watch & Media</a>
+          <a class="btn secondary" href="/vip-weekend.html">VIP Weekend</a>
+        </div>
+
+        <p class="muted" style="margin-top:14px;">
+          Tip: This homepage is designed to sell the “feel” first—then give fans and venues fast paths to what they need.
+        </p>
+      </div>
+
+      <!-- IMAGE: start with placeholder; later replace with <img class="hero-img" ...> -->
+      <div class="hero-card">
+        <!-- PLACEHOLDER BLOCK -->
+        <div class="ph">HERO PHOTO PLACEHOLDER<br/>Dwight on stage • spotlight • crowd energy</div>
+
+        <!-- REAL IMAGE VERSION (when ready):
+        <img class="hero-img" src="/assets/images/dwight-hero.jpg" alt="Dwight Icenhower performing live on stage" />
+        -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS SITE -->
+<section class="section" id="highlights">
+  <div class="wrap">
+    <h2>Built for Fans, Venues, and Promoters</h2>
+    <p class="muted" style="margin-top:8px;">
+      Simple to navigate. Easy to book. Designed to convert interest into ticket sales and bookings.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="title">For Fans</div>
+        <p>Tour dates, ticket links, VIP Weekend details, and a media hub—all in one place.</p>
+      </div>
+      <div class="card">
+        <div class="title">For Venues</div>
+        <p>A clean booking path with show options, media proof, and professional presentation.</p>
+      </div>
+      <div class="card">
+        <div class="title">For the Brand</div>
+        <p>Premium look and consistent messaging across Elvis, Elton, and Lonesome Cowboy Strangers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWS -->
+<section class="section" id="productions">
+  <div class="wrap">
+    <h2>Three Live Productions</h2>
+    <p class="muted" style="margin-top:8px;">Each one is built for a specific audience and venue type.</p>
+
+    <div class="show-grid">
+
+      <div class="show">
+        <div class="show-ph">ELVIS TRIBUTE IMAGE</div>
+        <!-- REAL IMAGE:
+        <img class="show-img" src="/assets/images/elvis-show.jpg" alt="Elvis tribute concert performance" />
+        -->
+        <div class="show-body">
+          <h3>Elvis Tribute Concert Experience</h3>
+          <p>Flagship concert-style tribute designed for theaters, casinos, festivals, and headline events.</p>
+          <div class="mini-cta">
+            <a class="btn primary" href="/shows.html">Explore Shows</a>
+            <a class="btn secondary" href="/book-dwight.html">Book Dwight</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="show">
+        <div class="show-ph">ELTON JOHN TRIBUTE IMAGE</div>
+        <!-- REAL IMAGE:
+        <img class="show-img" src="/assets/images/elton-show.jpg" alt="Elton John tribute performance" />
+        -->
+        <div class="show-body">
+          <h3>Elton John Tribute Show</h3>
+          <p>High-energy crowd favorite—colorful, upbeat, and built for broad audience appeal.</p>
+          <div class="mini-cta">
+            <a class="btn primary" href="/shows.html">Explore Shows</a>
+            <a class="btn secondary" href="/tour-dates.html">See Dates</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="show">
+        <div class="show-ph">LONESOME COWBOY STRANGERS IMAGE</div>
+        <!-- REAL IMAGE:
+        <img class="show-img" src="/assets/images/lcs-show.jpg" alt="Lonesome Cowboy Strangers live performance" />
+        -->
+        <div class="show-body">
+          <h3>Lonesome Cowboy Strangers</h3>
+          <p>Original Americana with storytelling and musicianship—perfect for listening rooms and intimate venues.</p>
+          <div class="mini-cta">
+            <a class="btn primary" href="/shows.html">Explore Shows</a>
+            <a class="btn secondary" href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOUR + VIP STRIP -->
+<section class="section" id="tour">
+  <div class="wrap">
+    <h2>Tour Dates & Tickets</h2>
+    <p class="muted" style="margin-top:8px;">
+      Fans want fast access. Venues want routing clarity. This section pushes both.
+    </p>
+
+    <div class="tour-box">
+      <div>
+        <strong>See upcoming dates, cities, and ticket links.</strong><br/>
+        <span class="muted">We can add filters by show type, state, and month.</span>
+      </div>
+      <div class="cta" style="margin-top:0;">
+        <a class="btn primary" href="/tour-dates.html">Go to Tour Dates</a>
+        <a class="btn secondary" href="/vip-weekend.html">VIP Weekend</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
